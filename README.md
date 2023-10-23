@@ -5,7 +5,8 @@ https://ibotpeaches.github.io/Apktool/
 java -jar apktool_2.6.1.jar d app-release.apk
 ## 2.删除签名文件
 签名文件在解压文件后的\app-release\META-INF目录下 C:\Users\xxoo\Downloads\app-release\META-INF
-## 3.添加要替换的文件到 C:\Users\xxoo\Downloads\app-release\assets下
+## 3.添加要替换的文件到
+C:\Users\xxoo\Downloads\app-release\assets下
 ## 4.生成签名文件
 keytool -genkey -alias cert -keyalg RSA -validity 20000 -keystore xxoo.keystore
 ## 5.重新打包
