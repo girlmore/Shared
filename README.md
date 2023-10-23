@@ -8,10 +8,10 @@ java -jar apktool_2.6.1.jar d app-release.apk
 ## 3.添加要替换的文件到
 C:\Users\xxoo\Downloads\app-release\assets下
 ## 4.生成签名文件
-keytool -genkey -alias cert -keyalg RSA -validity 20000 -keystore xxoo.keystore
+keytool -genkey -alias cert -keyalg RSA -validity 20000 -keystore xxoo.keystore -storepass 123456
 ## 5.重新打包
 java -jar apktool_2.6.1.jar b app-release
 ## 6.使用重新打包后的apk和签名文件打包
-jarsigner -verbose -keystore xxoo.keystore -signedjar app-release-signed.apk app-release.apk cert
+jarsigner -verbose -keystore xxoo.keystore -storepass 123456 -signedjar app-release-signed.apk app-release.apk cert
 
 
