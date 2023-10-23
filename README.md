@@ -1,5 +1,6 @@
 # APK重新打包签名
-apktool下载地址:https://ibotpeaches.github.io/Apktool/
+apktool下载地址:
+https://ibotpeaches.github.io/Apktool/
 ## 1.解压apk包
 java -jar apktool_2.6.1.jar d app-release.apk
 ## 2.删除签名文件
