@@ -32,7 +32,11 @@ apksigner verify -v --print-certs C:\app-name.apk
 经常使用参数有：  
 -v 显示签名详情，是否使用 v1 、v2 签名。  
 --in 指定待校验的 apk 文件路径。当 apk 路径放在命令末尾时，此参数能够省略。  
---print-certs 显示 apk 文件中包含的签名文件证书信息。
+--print-certs 显示 apk 文件中包含的签名文件证书信息。  
+* 示例 1  
+apksigner verify --in app-release.apk -v -print-certs
+* 示例 2  
+apksigner verify -v -print-certs app-release.apk
 ## 8.字节对齐
 * 如果您使用的是 apksigner，则必须在为 APK 文件签名之前使用 zipalign。如果您在使用 apksigner 为 APK 签名之后对 APK 做出了进一步更改，签名便会失效。
 * 如果您使用的是 jarsigner（不推荐），则必须在为 APK 文件签名之后使用 zipalign。  
