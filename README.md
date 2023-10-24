@@ -5,7 +5,7 @@ https://ibotpeaches.github.io/Apktool/
 java -jar apktool_2.9.0.jar d app-release.apk  
 $ apktool d -s -f test.apk  
 -d 反编译 apk 文件  
--s 不反编译 dex 文件，而是将其保留 
+-s 不反编译 dex 文件，而是将其保留  
 -r 参数不会反编译资源文件
 -f 如果目标文件夹存在，则删除后重新反编译
 ## 2.删除签名文件
