@@ -17,8 +17,8 @@ keytool -genkeypair -alias cert -keyalg RSA -validity 20000 -keystore xxoo.keyst
 java -jar apktool_2.9.0.jar b app-release  
 $apktool b b_test -o newtest.apk  
 -b 是指 build  
+-o 用于指定新的文件名称，这里指定为「newtest.apk」  
 b_test 是刚才反编译出的文件所在的目录  
--o 用于指定新的文件名称，这里指定为「newtest.apk」
 ## 6.使用重新打包后的apk和签名文件打包
 jarsigner -verbose -keystore xxoo.keystore -storepass 123456 -signedjar app-release-signed.apk app-release.apk cert  
 或者  
