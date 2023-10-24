@@ -20,6 +20,5 @@ java -jar apksigner.jar sign -v --ks xxoo.keystore --ks-key-alias cert --ks-pass
 * 如果您使用的是 apksigner，则必须在为 APK 文件签名之前使用 zipalign。如果您在使用 apksigner 为 APK 签名之后对 APK 做出了进一步更改，签名便会失效。
 * 如果您使用的是 jarsigner（不推荐），则必须在为 APK 文件签名之后使用 zipalign。
 
-zipalign -p -f -v 4 infile.apk outfile.apk
-
+zipalign -p -f -v 4 infile.apk outfile.apk  
 zipalign -c -v 4 outfile.apk
