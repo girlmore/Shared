@@ -16,7 +16,7 @@ C:\Users\xxoo\Downloads\app-release\assets下
 keytool -genkeypair -alias cert -keyalg RSA -validity 20000 -keystore xxoo.keystore -storepass 123456  
 * 一次性生成：keytool -genkeypair -alias mykey -keypass 123456 -keyalg RSA -keysize 2048 -validity 20000 -keystore  xxoo.keystore -storepass 123456 -dname "CN=名字与姓氏,OU=组织 单位名称,O=组织名称,L=城市或区域名称,ST=州或省份名称,C=单位 的两字母国家代码"
 查看签名信息  
-* 查看APK签名信息：keytool-printcert -file META-INF/CERT.RSA
+* 查看APK签名信息：keytool -printcert -file META-INF/CERT.RSA
 ## 5.重新打包
 java -jar apktool_2.9.0.jar b app-release  
 $apktool b b_test -o newtest.apk  
