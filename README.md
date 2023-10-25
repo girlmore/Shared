@@ -3,10 +3,10 @@ apktool下载地址:
 https://ibotpeaches.github.io/Apktool/
 ## 1.解压apk包
 java -jar apktool_2.9.0.jar d app-release.apk  
-$ apktool d -s -f test.apk  
+$ apktool d -s -f -s -r test.apk  
 * -d 反编译 apk 文件
 * -s 不反编译 dex 文件，而是将其保留
-* -r 参数不会反编译资源文件
+* -r 不会反编译资源文件
 * -f 如果目标文件夹存在，则删除后重新反编译
 ## 2.删除签名文件
 签名文件在解压文件后的\app-release\META-INF目录下 C:\Users\xxoo\Downloads\app-release\META-INF
