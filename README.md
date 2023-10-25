@@ -1,12 +1,7 @@
 # APK重新打包签名
-* apktool.jar
-* keytool.exe
-* jsrsigner.jar
-* apksigner.jar
-* zipalign.exe
-* [apktool](https://ibotpeaches.github.io/Apktool)
-* [Oracle jdk8](https://download.oracle.com/java/18/latest/jdk-18_windows-x64_bin.zip)
-* [Android Build Tool](https://dl.google.com/android/repository/build-tools_r34-windows.zip)
+* [apktool](https://ibotpeaches.github.io/Apktool):apktool.bat,apktool.jar
+* [Oracle jdk8](https://download.oracle.com/java/18/latest/jdk-18_windows-x64_bin.zip):keytool.exe,jarsigner.jar
+* [Android Build Tool](https://dl.google.com/android/repository/build-tools_r34-windows.zip):apksigner.bat,apksigner.jar,zipalign.exe
 ## 1.解压apk包
 java -jar apktool_2.9.0.jar d app-release.apk  
 $ apktool d -s -f -s -r test.apk  
