@@ -1,4 +1,5 @@
 # APK重新打包签名
+主要工具:
 * [apktool](https://ibotpeaches.github.io/Apktool):apktool.bat,apktool.jar
 * [Oracle jdk8](https://download.oracle.com/java/18/latest/jdk-18_windows-x64_bin.zip):keytool.exe,jarsigner.jar
 * [Android Build Tool](https://dl.google.com/android/repository/build-tools_r34-windows.zip):apksigner.bat,apksigner.jar,zipalign.exe
