@@ -10,7 +10,7 @@ $ apktool d -s -f -s -r test.apk
 * -f 如果目标文件夹存在，则删除后重新反编译
 ## 2.删除签名文件
 签名文件在解压文件后的\app-release\META-INF目录下，删除里面的MANIFEST.MF、*.SF和*.RSA（或*.DSA）
-## 3.修改替换文件
+## 3.修改或替换文件
 C:\Users\xxoo\Downloads\app-release
 ## 4.生成签名文件
 ~~keytool -genkeypair -alias cert -keyalg RSA -validity 20000 -keystore xxoo.keystore -storepass 123456~~
