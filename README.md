@@ -20,10 +20,10 @@ C:\Users\xxoo\Downloads\app-release
 * keytool -printcert -file META-INF/CERT.RSA
 ## 5.重新打包
 java -jar apktool_2.9.0.jar b app-release -o newtest.apk
-$apktool b b_test -o newtest.apk  
+$apktool b app-release -o newtest.apk  
 * -b 是指 build
 * -o 用于指定新的文件名称，这里指定为「newtest.apk」
-* b_test 是刚才反编译出的文件所在的目录
+* app-release 是刚才反编译出的文件所在的目录
 ## 6.使用重新打包后的apk和签名文件打包
 ~~* jarsigner -verbose -keystore xxoo.keystore -storepass 123456 -signedjar app-release-signed.apk app-release.apk cert~~
 * jarsigner –verbose -digestalg SHA1 -sigalg SHA1withRSA –keystore xxoo.keystore -storepass 123456 –signedjar omapAndroidV989_signed.apk omapAndroidV989.apk CERT
