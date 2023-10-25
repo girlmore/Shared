@@ -1,6 +1,11 @@
 # APK重新打包签名
-apktool下载地址:
-https://ibotpeaches.github.io/Apktool/
+* apktool:https://ibotpeaches.github.io/Apktool
+* keytool.exe:Oracle jdk8
+* jarsigner.jar:Oracle jdk8
+* apksigner.jar:Android Build Tool
+* zapksigner.exe: Android Build Tool
+https://download.oracle.com/java/18/latest/jdk-18_windows-x64_bin.zip  
+https://dl.google.com/android/repository/build-tools_r34-windows.zip
 ## 1.解压apk包
 java -jar apktool_2.9.0.jar d app-release.apk  
 $ apktool d -s -f -s -r test.apk  
