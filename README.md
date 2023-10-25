@@ -19,7 +19,7 @@ C:\Users\xxoo\Downloads\app-release
 * keytool -list -v -keystore xxx.keystore
 * keytool -printcert -file META-INF/CERT.RSA
 ## 5.重新打包
-java -jar apktool_2.9.0.jar b app-release  
+java -jar apktool_2.9.0.jar b app-release -o newtest.apk
 $apktool b b_test -o newtest.apk  
 * -b 是指 build
 * -o 用于指定新的文件名称，这里指定为「newtest.apk」
