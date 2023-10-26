@@ -19,7 +19,6 @@ C:\Users\xxoo\Downloads\app-release
 ~~* 一次性生成：keytool -genkeypair -alias mykey -keypass 123456 -keyalg RSA -keysize 2048 -validity 20000 -keystore  xxoo.keystore -storepass 123456 -dname "CN=名字与姓氏,OU=组织 单位名称,O=组织名称,L=城市或区域名称,ST=州或省份名称,C=单位 的两字母国家代码"~~
 * keytool -genkeypair -keystore xxoo. keystore  -keyalg RSA -sigalg SHA1withRSA -keysize 1024 -storepass 123456 -keypass 123456 -validity 30000 -alias CERT -dname "CN= Ovital,OU= Ovital,O= Ovital,L= Ovital,ST= Ovital,C=Ovital"
 * keytool -list -v -keystore xxx.keystore
-* keytool -printcert -file META-INF/CERT.RSA
 ## 5.重新打包
 java -jar apktool.jar b app-release -o newtest.apk  
 $apktool b app-release -o newtest.apk  
@@ -43,6 +42,7 @@ apksigner verify -v --print-certs C:\app-name.apk
   示例
 * apksigner verify --in app-release.apk -v -print-certs  
 ~~* apksigner verify -v -print-certs app-release.apk~~
+* keytool -printcert -file META-INF/CERT.RSA
 ## 8.字节对齐
 * 如果您使用的是 apksigner，则必须在为 APK 文件签名之前使用 zipalign。如果您在使用 apksigner 为 APK 签名之后对 APK 做出了进一步更改，签名便会失效。
 * 如果您使用的是 jarsigner（不推荐），则必须在为 APK 文件签名之后使用 zipalign。  
