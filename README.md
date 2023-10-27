@@ -32,8 +32,8 @@ $apktool b app-release -o newtest.apk
 ~~java -jar apksigner.jar sign --ks [签名证书存放路径] --ks-key-alias [签名证书别名] --ks-pass pass:[签名证书密钥] --key-pass pass:[签名证书别名密钥] --min-sdk-version [指定应用支持最低的安卓API版本] --max-sdk-version [指定应用支持最高的安卓API版本] --v1-signing-enabled true --v2-signing-enabled true --v3-signing-enabled true --v4-signing-enabled true --out [签名后文件存放路径] [未签名的文件路径]~~
 ## 7.验证 APK 签名
 在受支持的平台上确认 APK 签名是否成功通过验证的语法如下：  
-jarsigner -verify xxx.apk -verbose  
-apksigner verify -v --print-certs C:\app-name.apk  
+* jarsigner -verify xxx.apk -verbose  
+* apksigner verify -v --print-certs C:\app-name.apk  
 使用 apksigner verify 校验已签名的 apk 文件。包括查看签名方式和使用的证书信息。  
 apksigner verify [options] app-name.apk  
 经常使用参数有：  
