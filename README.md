@@ -18,7 +18,7 @@ C:\Users\xxoo\Downloads\app-release
 ~~keytool -genkeypair -alias cert -keyalg RSA -validity 20000 -keystore xxoo.keystore -storepass 123456~~
 ~~* 一次性生成：keytool -genkeypair -alias mykey -keypass 123456 -keyalg RSA -keysize 2048 -validity 20000 -keystore  xxoo.keystore -storepass 123456 -dname "CN=名字与姓氏,OU=组织 单位名称,O=组织名称,L=城市或区域名称,ST=州或省份名称,C=单位 的两字母国家代码"~~
 * * keytool -genkeypair -alias xxoo -keyalg RSA -keysize 1024 -sigalg SHA1withRSA -dname "CN= Ovital,OU= Ovital,O= Ovital,L= Ovital,ST= Ovital,C=Ovital" -validity 30000 -keypass 123456  -keystore xxoo. keystore  -storepass 123456 -v
-* keytool -list -v -keystore xxx.keystore
+* * keytool -list -alias xxoo -keystore xxoo.keystore -storepass 123456 -v
 ## 5.重新打包
 java -jar apktool.jar b app-release -o newtest.apk  
 $apktool b app-release -o newtest.apk  
