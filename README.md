@@ -2,7 +2,7 @@
 主要工具:
 #### [apktool](https://ibotpeaches.github.io/Apktool):apktool.bat,apktool.jar
 #### [Oracle jdk8](https://download.oracle.com/java/18/latest/jdk-18_windows-x64_bin.zip):keytool.exe,jarsigner.jar
-#### [Android Build Tool](https://dl.google.com/android/repository/build-tools_r34-windows.zip):apksigner.bat,apksigner.jar,zipalign.exe
+#### [Android Build Tool](https://dl.google.com/android/repository/build-tools_r34-windows.zip):  apksigner.bat,apksigner.jar,zipalign.exe
 ## 1.解压apk包
 java -jar apktool.jar d app-release.apk  
 $ apktool d -s -f -s -r test.apk  
