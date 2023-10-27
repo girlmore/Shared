@@ -33,9 +33,9 @@ $apktool b app-release -o newtest.apk
 ## 7.验证 APK 签名
 在受支持的平台上确认 APK 签名是否成功通过验证的语法如下：  
 jarsigner -verify xxx.apk -verbose  
-apksigner verify [options] app-name.apk  
 apksigner verify -v --print-certs C:\app-name.apk  
 使用 apksigner verify 校验已签名的 apk 文件。包括查看签名方式和使用的证书信息。  
+apksigner verify [options] app-name.apk  
 经常使用参数有：  
 * -v 显示签名详情，是否使用 v1 、v2 签名。  
 * --in 指定待校验的 apk 文件路径。当 apk 路径放在命令末尾时，此参数能够省略。  
