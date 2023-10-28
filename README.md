@@ -57,7 +57,7 @@ zipalign -c -v 4 outfile.apk
 ### 9.1 解决验证签名出现的告警提示：“此jar 包含证书链未验证的条目”
 在 JDK8 之前，这些文件的默认格式为 JKS；从 JDK9 开始，默认格式为PKCS12。JDK 中有个默认的信任库 cacerts，它位于 $JAVA_HOME/jre/lib/security 目录中。
 * keytool -exportcert -alias xxoo  -file xxoo.cert -keystore xxoo.keystore -storepass 123456 -v
-* keytool -import -alias xxoo -file xxoo.cer -keystore %JAVA_HOME%\jre\lib\security\ cacerts -storepass changeit
+* keytool -import -v -trustcacerts -alias xxoo -file xxoo.cer -keystore %JAVA_HOME%\jre\lib\security\ cacerts -storepass changeit
 ### 9.2 解决签名时出现的告警提示：“未提供-tsa或-tsacert，此jar没有时间戳……”
 * jarsigner –keystore xxoo.keystore -storepass 123456 -keypass 123456 -sigfile CERT -digestalg SHA1 -sigalg SHA1withRSA  -verbose -tsa https://timestamp.geotrust.com/tsa –signedjar omapAndroidV989_signed.apk omapAndroidV989.apk xxoo  
   免费时间戳服务器：
