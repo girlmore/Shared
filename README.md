@@ -39,15 +39,13 @@ $apktool b app-release -o newtest.apk
 ### 7.2 apksigner
 使用 apksigner verify 校验已签名的 apk 文件。包括查看签名方式和使用的证书信息。  
 * apksigner verify -v --print-certs C:\xxoo.apk
-
+* apksigner verify --in app-release.apk -v -print-certs  
+~~* apksigner verify -v -print-certs app-release.apk~~  
 apksigner verify [options] app-name.apk  
 经常使用参数有：  
 * -v 显示签名详情，是否使用 v1 、v2 签名。  
 * --in 指定待校验的 apk 文件路径。当 apk 路径放在命令末尾时，此参数能够省略。  
 * --print-certs 显示 apk 文件中包含的签名文件证书信息。  
-  示例
-* apksigner verify --in app-release.apk -v -print-certs  
-~~* apksigner verify -v -print-certs app-release.apk~~
 ### 7.3 keytool
 keytool -printcert -file META-INF/CERT.RSA
 ## 8.字节对齐
