@@ -49,3 +49,19 @@ apksigner verify [options] app-name.apk
 * 如果您使用的是 jarsigner（不推荐），则必须在为 APK 文件签名之后使用 zipalign。  
 zipalign -p -f -v 4 infile.apk outfile.apk  
 zipalign -c -v 4 outfile.apk
+## 9.其他
+###解决验证签名出现的告警提示：“此jar 包含证书链未验证的条目”
+* keytool -exportcert -alias xxoo  -file xxoo.cert -keystore xxoo.keystore -storepass 123456 -v
+* keytool -import -alias xxoo -file xxoo.cer -keystore %JAVA_HOME%\jre\lib\security\ cacerts -storepass changeit
+###解决签名时出现的告警提示：“未提供-tsa或-tsacert，此jar没有时间戳……”
+* jarsigner –keystore xxoo.keystore -storepass 123456 -keypass 123456 -sigfile CERT -digestalg SHA1 -sigalg SHA1withRSA  -verbose -tsa https://timestamp.geotrust.com/tsa –signedjar omapAndroidV989_signed.apk omapAndroidV989.apk xxoo
+- http://timestamp.apple.com/ts01
+- https://timestamp.geotrust.com/tsa
+- http://timestamp.digicert.com
+- http://sha256timestamp.ws.symantec.com/sha256/timestamp
+- http://timestamp.verisign.com/scripts/timstamp.dll 
+- http://timestamp.comodoca.com/authenticode
+- http://tsa.startssl.com/timestamp
+- http://timestamp.sectigo.com
+- http://timestamp.sectigo.com?td =sha256
+- http://timestamp.sectigo.com/qualiYed
