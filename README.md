@@ -54,7 +54,7 @@ zipalign -c -v 4 outfile.apk
 * keytool -exportcert -alias xxoo  -file xxoo.cert -keystore xxoo.keystore -storepass 123456 -v
 * keytool -import -alias xxoo -file xxoo.cer -keystore %JAVA_HOME%\jre\lib\security\ cacerts -storepass changeit
 ###解决签名时出现的告警提示：“未提供-tsa或-tsacert，此jar没有时间戳……”
-* jarsigner –keystore xxoo.keystore -storepass 123456 -keypass 123456 -sigfile CERT -digestalg SHA1 -sigalg SHA1withRSA  -verbose -tsa https://timestamp.geotrust.com/tsa –signedjar omapAndroidV989_signed.apk omapAndroidV989.apk xxoo
+* jarsigner –keystore xxoo.keystore -storepass 123456 -keypass 123456 -sigfile CERT -digestalg SHA1 -sigalg SHA1withRSA  -verbose -tsa https://timestamp.geotrust.com/tsa –signedjar omapAndroidV989_signed.apk omapAndroidV989.apk xxoo  
   免费时间戳服务器：
 - http://timestamp.apple.com/ts01
 - https://timestamp.geotrust.com/tsa
