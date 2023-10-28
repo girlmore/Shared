@@ -38,7 +38,8 @@ $apktool b app-release -o newtest.apk
 * jarsigner -verify xxoo.apk -verbose  
 ### 7.2 apksigner
 使用 apksigner verify 校验已签名的 apk 文件。包括查看签名方式和使用的证书信息。  
-* apksigner verify -v --print-certs C:\xxoo.apk  
+* apksigner verify -v --print-certs C:\xxoo.apk
+
 apksigner verify [options] app-name.apk  
 经常使用参数有：  
 * -v 显示签名详情，是否使用 v1 、v2 签名。  
@@ -56,6 +57,7 @@ zipalign -p -f -v 4 infile.apk outfile.apk
 zipalign -c -v 4 outfile.apk
 ## 9.其他
 ###解决验证签名出现的告警提示：“此jar 包含证书链未验证的条目”
+在 JDK8 之前，这些文件的默认格式为 JKS；从 JDK9 开始，默认格式为PKCS12。JDK 中有个默认的信任库 cacerts，它位于 $JAVA_HOME/jre/lib/security 目录中。
 * keytool -exportcert -alias xxoo  -file xxoo.cert -keystore xxoo.keystore -storepass 123456 -v
 * keytool -import -alias xxoo -file xxoo.cer -keystore %JAVA_HOME%\jre\lib\security\ cacerts -storepass changeit
 ###解决签名时出现的告警提示：“未提供-tsa或-tsacert，此jar没有时间戳……”
