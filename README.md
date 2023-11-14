@@ -5,7 +5,7 @@
 #### [Android Build Tool](https://dl.google.com/android/repository/build-tools_r34-windows.zip):  apksigner.bat,apksigner.jar,zipalign.exe
 ## 1.解压apk包
 java -jar apktool.jar d app-release.apk  
-$ apktool d -s -f -s -r test.apk  
+$ apktool d -f -s -r test.apk  
 * -d 反编译 apk 文件
 * -s 不反编译 dex 文件，而是将其保留
 * -r 不会反编译资源文件
